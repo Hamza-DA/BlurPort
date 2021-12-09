@@ -1,0 +1,42 @@
+[
+  {
+    "name": "watched - a movie app",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem in",
+    "thumb": "/images/projects/watched.png",
+    "direct_link": "https://google.com",
+    "social": [
+      {
+        "name": "resume",
+        "short": "re",
+        "emojie": "📕",
+        "link": "./resume.pdf"
+      },
+      {
+        "name": "email",
+        "short": "em",
+        "emojie": "📬",
+        "link": "mailto:madebyhamzadahmani@gmail.com"
+      }
+    ]
+  },
+  {
+    "name": "watched - a movie app",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem in",
+    "thumb": "/images/projects/watched.png",
+    "direct_link": "https://google.com",
+    "social": [
+      {
+        "name": "resume",
+        "short": "re",
+        "emojie": "📕",
+        "link": "./resume.pdf"
+      },
+      {
+        "name": "email",
+        "short": "em",
+        "emojie": "📬",
+        "link": "mailto:madebyhamzadahmani@gmail.com"
+      }
+    ]
+  }
+]

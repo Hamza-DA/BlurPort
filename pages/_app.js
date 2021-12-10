@@ -31,7 +31,7 @@ export default function App({ Component, pageProps, router }) {
           name='keywords'
           content='frontend, developer, design, creative, html, css, js, reactjs, nextjs, sass'
         />
-        <meta property='og:image' content='./public/open_graph.jpg' />
+        <meta property='og:image' content='/public/open_graph.jpg' />
         <meta property='og:type' content='website' />
 
         <meta name='twitter:card' content='summary_large_image' />

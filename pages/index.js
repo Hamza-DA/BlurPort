@@ -1,11 +1,9 @@
 import Head from 'next/head';
-import BlurBox from './components/BlurBox';
 import styles from '../styles/index.module.scss';
-import SocialBlocks from './components/SocialBlocks';
-import SocialLinks from './components/SocialLinks';
-import BlurBoxContainer from './components/BlurBoxContainer';
-import { motion } from 'framer-motion';
-import Pragraph from './components/Paragraph';
+import SocialBlocks from '../components/SocialBlocks';
+import SocialLinks from '../components/SocialLinks';
+import BlurBoxContainer from '../components/BlurBoxContainer';
+import Pragraph from '../components/Paragraph';
 // custom cursor https://codesandbox.io/s/n6i55?file=/src/index.js
 // https://codepen.io/january1979/pen/MWbgRjy?editors=0010
 export default function Home() {
@@ -13,6 +11,22 @@ export default function Home() {
     <>
       <Head>
         <title>Hamza Dahmani &#128570; Front-End Developer</title>
+        <meta
+          property='og:title'
+          content='Hamza Dahmani &#128570; Creative Front-End developer'
+        />
+        <meta
+          name='description'
+          content="Hi, I'm Hamza Dahmani, a creative self-taught Front-End developer. My mission since 2018 is to turn your brilliant ideas into a one-of-a-kind project!"
+        />
+        <meta
+          name='twitter:title'
+          content='Hamza Dahmani &#128570; Creative Front-End developer'
+        />
+        <meta
+          name='twitter:description'
+          content="Hi, I'm Hamza Dahmani, a creative self-taught Front-End developer. My mission since 2018 is to turn your brilliant ideas into a one-of-a-kind project!"
+        />
       </Head>
       <BlurBoxContainer>
         <div className={styles.AInf}>
@@ -21,10 +35,8 @@ export default function Home() {
             <strong className='gradient_text'>solid</strong> projects!
           </h2>
 
-          <motion.button
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2 }}
+          <button
+            onClick={() => window.scrollTo(0, document.body.scrollHeight)}
             className={`${styles.cta_button} glass link_btn`}
           >
             <svg
@@ -56,9 +68,9 @@ export default function Home() {
             </svg>
             Contact me
             <span className={styles.cholder}>
-              <span className='colors'></span>
+              <span className={styles.colors}></span>
             </span>
-          </motion.button>
+          </button>
         </div>
       </BlurBoxContainer>
       <section className={styles.network_section}>

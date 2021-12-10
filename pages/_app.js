@@ -1,7 +1,7 @@
-import Layout from './components/layout';
+import Layout from '../components/layout';
 import { m, LazyMotion, AnimatePresence, domAnimation } from 'framer-motion';
 import global from '../styles/global.scss';
-import Header from './components/Header';
+import Header from '../components/Header';
 import Head from 'next/head';
 export default function App({ Component, pageProps, router }) {
   const varients = {
@@ -25,14 +25,18 @@ export default function App({ Component, pageProps, router }) {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
         <link rel='shortcut icon' href='./favicon.png' type='image/png' />
+        <meta name='robots' content='index, follow' />
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
         <meta
-          property='og:title'
-          content='Hamza Dahmani - Creative Front-End developer'
+          name='keywords'
+          content='frontend, developer, design, creative, html, css, js, reactjs, nextjs, sass'
         />
+        <meta property='og:image' content='./public/open_graph.jpg' />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content='./public/opengraphimage.png' />
-        <meta property='og:description' content='' />
-        {/* <meta property='og:url' content='' /> */}
+
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:site' content='@hamzadahmani01' />
+        <meta name='twitter:image' content='./public/open_graph.jpg'></meta>
 
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />

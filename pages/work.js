@@ -1,8 +1,8 @@
-import SocialBlocks from './components/SocialBlocks';
-import BlurBoxContainer from './components/BlurBoxContainer';
-import ProjectThumbnail from './components/ProjectThumbnail';
+import SocialBlocks from '../components/SocialBlocks';
+import BlurBoxContainer from '../components/BlurBoxContainer';
+import ProjectThumbnail from '../components/ProjectThumbnail';
 import styles from '.././styles/work.module.scss';
-import json from '.././public/images/projects/projects.json';
+import json from '.././public/projects/projects.json';
 import Head from 'next/head';
 import { useState } from 'react';
 export default function Work() {
@@ -10,7 +10,17 @@ export default function Work() {
   return (
     <>
       <Head>
-        <title>Hamza Dahmani 🎨 Work</title>
+        <title>Hamza Dahmani &#127912; Work</title>
+        <meta property='og:title' content='Hamza Dahmani &#127912; Work' />
+        <meta
+          name='description'
+          content='The main technologies I use in my projects are ReactJs, NextJs, Sass, JavaScript, and TailwindCSS.'
+        />
+        <meta name='twitter:title' content='Hamza Dahmani &#127912; Work' />
+        <meta
+          name='twitter:description'
+          content='The main technologies I use in my projects are ReactJs, NextJs, Sass, JavaScript, and TailwindCSS.'
+        />
       </Head>
       <BlurBoxContainer>
         <div className={styles.work_intro}>

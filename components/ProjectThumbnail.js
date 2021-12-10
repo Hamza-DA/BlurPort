@@ -1,10 +1,11 @@
 import styles from '../../styles/ProjectThumbnail.module.scss';
 import Image from 'next/image';
+import emoji from 'emoji-dictionary';
 export default function ProjectThumbnail({ project, index }) {
   const ProjectLinks = () => {
     return project.social.map((e, i) => (
       <a key={i} className='link' href={e.link}>
-        <span className={styles.link_emojie}>{e.emojie}</span>
+        <span className={styles.link_emojie}>{emoji.getUnicode(e.emojie)}</span>
         <span className={styles.short_name}>{e.short}</span>
         <span className={styles.full_name}>{e.name}</span>
       </a>
@@ -28,7 +29,9 @@ export default function ProjectThumbnail({ project, index }) {
             <div className={styles.pr_social}>
               <a
                 href={project.direct_link}
-                className={`${styles.live_link} link_btn`}
+                className={`${styles.live_link} ${
+                  project.direct_link == null && 'link_disabled'
+                } link_btn`}
               >
                 <svg
                   width='17'
@@ -57,7 +60,7 @@ export default function ProjectThumbnail({ project, index }) {
                     </linearGradient>
                   </defs>
                 </svg>
-                view site
+                view
                 <span className={styles.cholder}>
                   <span className='colors'></span>
                 </span>

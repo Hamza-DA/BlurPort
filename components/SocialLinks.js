@@ -47,6 +47,7 @@ export default function SocialLinks({ length }) {
       key={i}
       className={`${styles.link} link`}
       href={e.link}
+      target='_blank'
       download={e.download == true ? 'Hamza Dahmani - Resume' : ''}
     >
       <span className={`${styles.link_emojie} emojie`}>

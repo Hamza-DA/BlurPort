@@ -9,7 +9,9 @@
     flex-direction: column;
     margin-bottom: 4rem;
     p {
-      // width: 32%;
+      @media screen and (min-width: 480px) {
+        width: 38ch;
+      }
       margin-bottom: 1.5rem;
       opacity: 0.9;
     }
@@ -17,8 +19,6 @@
       // width: 50%;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      // grid-template-columns: auto auto auto auto;
-      // grid-template-rows: repeat(2, 1fr);
       grid-column-gap: 2rem;
       grid-row-gap: 2rem;
       @media screen and (max-width: 480px) {

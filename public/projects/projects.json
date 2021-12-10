@@ -1,0 +1,42 @@
+[
+  {
+    "name": "watched - a movie app",
+    "description": "Watched is a tool that helps you to save movies you already watched and other movies you would like to watch in the futur.",
+    "thumb": "/projects/watched.png",
+    "direct_link": null,
+    "social": [
+      {
+        "name": "github",
+        "short": "gh",
+        "emojie": "space_invader",
+        "link": "https://github.com/Hamza-DA/Watched"
+      },
+      {
+        "name": "dribbble",
+        "short": "bbb",
+        "emojie": "soccer",
+        "link": "https://dribbble.com/shots/17028399-Watched-Movie-App"
+      }
+    ]
+  },
+  {
+    "name": "Current",
+    "description": "Current is a currency converter tool built using ReactJs, API",
+    "thumb": "/projects/current.png",
+    "direct_link": null,
+    "social": [
+      {
+        "name": "github",
+        "short": "gh",
+        "emojie": "space_invader",
+        "link": "mailto:madebyhamzadahmani@gmail.com"
+      },
+      {
+        "name": "dribbble",
+        "short": "bbb",
+        "emojie": "soccer",
+        "link": "https://dribbble.com/shots/17029544-Current"
+      }
+    ]
+  }
+]

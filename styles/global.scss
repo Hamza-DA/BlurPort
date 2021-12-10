@@ -6,6 +6,7 @@ body {
   line-height: 1.6;
   font-size: 18px;
   color: $primary-white;
+  scroll-behavior: smooth;
 }
 body {
   background-color: $primary-black;
@@ -18,9 +19,9 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
-// *::selection {
-//   background-color: transparent;
-// }
+*::selection {
+  background-color: $primary-red;
+}
 a {
   text-decoration: none;
   color: $primary-white;
@@ -126,13 +127,7 @@ p {
   }
 }
 .app_wrapper {
-  // transition: 0.2s ease all;
   padding: 0 6rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
@@ -190,12 +185,15 @@ p {
 //     filter: blur(50px);
 //   }
 // }
-
+.link_disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
 .tiny_p {
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
   line-height: 27px;
   letter-spacing: 0px;
-  max-width: 32ch;
+  // max-width: 32ch;
 }

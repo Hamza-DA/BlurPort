@@ -1,4 +1,4 @@
-import styles from '../../styles/BlurBox.module.scss';
+import styles from '../styles/BlurBox.module.scss';
 export default function BlurBox() {
   return (
     <div className={styles.blur_border}>

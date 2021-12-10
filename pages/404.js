@@ -1,4 +1,4 @@
-import styles from '.././styles/404.module.scss';
+import styles from '../styles/404.module.scss';
 import Link from 'next/link';
 export default function c404() {
   return (

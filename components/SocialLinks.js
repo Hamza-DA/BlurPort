@@ -1,4 +1,4 @@
-import styles from '../../styles/SocialLinks.module.scss';
+import styles from '../styles/SocialLinks.module.scss';
 import emoji from 'emoji-dictionary';
 export default function SocialLinks({ length }) {
   const socialMedia = [

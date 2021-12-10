@@ -1,7 +1,7 @@
 import SocialBlocks from '../components/SocialBlocks';
 import BlurBoxContainer from '../components/BlurBoxContainer';
 import ProjectThumbnail from '../components/ProjectThumbnail';
-import styles from '.././styles/work.module.scss';
+import styles from '../styles/work.module.scss';
 import json from '.././public/projects/projects.json';
 import Head from 'next/head';
 import { useState } from 'react';

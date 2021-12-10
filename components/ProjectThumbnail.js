@@ -1,4 +1,4 @@
-import styles from '../../styles/ProjectThumbnail.module.scss';
+import styles from '../styles/ProjectThumbnail.module.scss';
 import Image from 'next/image';
 import emoji from 'emoji-dictionary';
 export default function ProjectThumbnail({ project, index }) {

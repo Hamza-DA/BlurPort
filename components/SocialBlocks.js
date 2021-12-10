@@ -1,4 +1,4 @@
-import styles from '../../styles/SocialBlocks.module.scss';
+import styles from '../styles/SocialBlocks.module.scss';
 import Pragraph from './Paragraph';
 import SocialLinks from './SocialLinks';
 export default function SocialBlocks() {

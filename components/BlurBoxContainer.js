@@ -1,4 +1,4 @@
-import styles from '../../styles/BlurBoxContainer.module.scss';
+import styles from '../styles/BlurBoxContainer.module.scss';
 import BlurBox from './BlurBox';
 export default function BlurBoxContainer({ children }) {
   return (

@@ -1,4 +1,4 @@
-import styles from '../../styles/layout.module.scss';
+import styles from '../styles/layout.module.scss';
 export default function Layout({ children }) {
   return <main className={styles.container}>{children}</main>;
 }

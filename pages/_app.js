@@ -31,12 +31,18 @@ export default function App({ Component, pageProps, router }) {
           name='keywords'
           content='frontend, developer, design, creative, html, css, js, reactjs, nextjs, sass'
         />
-        <meta property='og:image' content='./opengraph.jpg' />
+        <meta
+          property='og:image'
+          content='https://hamzadahmani.vercel.app/opengraph.jpg'
+        />
         <meta property='og:type' content='website' />
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@hamzadahmani01' />
-        <meta name='twitter:image' content='./opengraph.jpg'></meta>
+        <meta
+          name='twitter:image'
+          content='https://hamzadahmani.vercel.app/opengraph.jpg'
+        ></meta>
 
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />

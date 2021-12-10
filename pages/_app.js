@@ -36,7 +36,7 @@ export default function App({ Component, pageProps, router }) {
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@hamzadahmani01' />
-        <meta name='twitter:image' content='./public/open_graph.jpg'></meta>
+        <meta name='twitter:image' content='/public/open_graph.jpg'></meta>
 
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />

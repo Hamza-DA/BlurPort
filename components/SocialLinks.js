@@ -48,7 +48,7 @@ export default function SocialLinks({ length }) {
       className={`${styles.link} link`}
       href={e.link}
       target='_blank'
-      download={e.download == true ? 'Hamza Dahmani - Resume' : ''}
+      download={e.download == true ? 'Hamza Dahmani - Resume' : 'false'}
     >
       <span className={`${styles.link_emojie} emojie`}>
         {emoji.getUnicode(`${e.emojie}`)}

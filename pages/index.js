@@ -47,8 +47,8 @@ export default function Home() {
               xmlns='http://www.w3.org/2000/svg'
             >
               <path
-                fill-rule='evenodd'
-                clip-rule='evenodd'
+                fillRule='evenodd'
+                clipRule='evenodd'
                 d='M16.7122 0.0991211L16.636 12.563L13.636 12.5446L13.6806 5.25203L2.97288 15.9598L0.851562 13.8385L11.5593 3.1307L4.26674 3.17532L4.24839 0.175379L16.7122 0.0991211Z'
                 fill='url(#paint0_linear_76_83)'
               />
@@ -61,8 +61,8 @@ export default function Home() {
                   y2='-3.56142'
                   gradientUnits='userSpaceOnUse'
                 >
-                  <stop stop-color='#FF103D' />
-                  <stop offset='1' stop-color='#CF59E6' />
+                  <stop stopColor='#FF103D' />
+                  <stop offset='1' stopColor='#CF59E6' />
                 </linearGradient>
               </defs>
             </svg>

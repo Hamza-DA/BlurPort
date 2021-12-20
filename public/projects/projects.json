@@ -20,6 +20,26 @@
     ]
   },
   {
+    "name": "Weather App",
+    "description": "Weather app is a standalone web app backed using express.js for backend, Next.js for frontend, tailwind for styling and openweather for API.",
+    "thumb": "/projects/weatherapp.jpg",
+    "direct_link": "https://hamzadahmani-weatherapp.herokuapp.com/",
+    "social": [
+      {
+        "name": "github",
+        "short": "gh",
+        "emojie": "space_invader",
+        "link": "https://github.com/Hamza-DA/weatherapp"
+      },
+      {
+        "name": "dribbble",
+        "short": "bbb",
+        "emojie": "soccer",
+        "link": "https://dribbble.com/shots/17100561-Weather-app-minimalist-design"
+      }
+    ]
+  },
+  {
     "name": "Current",
     "description": "Current is a currency converter tool built using ReactJs, API",
     "thumb": "/projects/current.png",

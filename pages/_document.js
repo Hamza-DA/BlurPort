@@ -5,6 +5,10 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta
+            name='google-site-verification'
+            content='1fI2fk6pPyU-bCI1qsg8E6hUkhKhMytheGSSWySL5tM'
+          />
           <meta name='theme-color' content='#0c0c0c' />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />

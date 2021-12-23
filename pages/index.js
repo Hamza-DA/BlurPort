@@ -36,7 +36,9 @@ export default function Home() {
           </h2>
 
           <button
-            onClick={() => window.scrollTo(0, document.body.scrollHeight)}
+            onClick={() =>
+              window.scrollTo && window.scrollTo(0, document.body.scrollHeight)
+            }
             className={`${styles.cta_button} glass link_btn`}
           >
             <svg

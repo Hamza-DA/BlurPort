@@ -12,6 +12,10 @@ export default function Home() {
       <Head>
         <title>Hamza Dahmani &#128570; Front-End Developer</title>
         <meta
+          name='google-site-verification'
+          content='1fI2fk6pPyU-bCI1qsg8E6hUkhKhMytheGSSWySL5tM'
+        />
+        <meta
           property='og:title'
           content='Hamza Dahmani &#128570; Creative Front-End developer'
         />

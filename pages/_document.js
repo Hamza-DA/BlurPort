@@ -39,6 +39,7 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <script src="/static/fouc-fix.js" />
         </body>
       </Html>
     );

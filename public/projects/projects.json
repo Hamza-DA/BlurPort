@@ -1,8 +1,9 @@
 [
   {
     "name": "watched - a movie app",
+    "category": ["Web App", "Design"],
     "description": "Watched is a tool that helps you to save movies you already watched and other movies you would like to watch in the futur.",
-    "thumb": "/projects/watched.png",
+    "thumb": "/projects/watched.jpg",
     "direct_link": null,
     "social": [
       {
@@ -40,22 +41,17 @@
     ]
   },
   {
-    "name": "Current",
-    "description": "Current is a currency converter tool built using ReactJs, API",
-    "thumb": "/projects/current.png",
+    "name": "Rafinity haute couture",
+    "category": ["Design"],
+    "description": "'Rafinity Haute Couture, a concept, a symbol'. I redesigned the website to reflect their elegance, aesthetic, and privilege.",
+    "thumb": "/projects/rafinity.jpg",
     "direct_link": null,
     "social": [
-      {
-        "name": "github",
-        "short": "gh",
-        "emojie": "space_invader",
-        "link": "mailto:madebyhamzadahmani@gmail.com"
-      },
       {
         "name": "dribbble",
         "short": "bbb",
         "emojie": "soccer",
-        "link": "https://dribbble.com/shots/17029544-Current"
+        "link": "https://dribbble.com/shots/17169297-Rafinity-Haute-Couture-website-redesign"
       }
     ]
   }

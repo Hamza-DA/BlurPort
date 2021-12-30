@@ -15,14 +15,17 @@ export default function ProjectThumbnail({ project, index }) {
   return (
     <>
       <div key={index} className={styles.project_thumb}>
-        <span className={` ${styles.project_index}`}>
-          <strong className='gradient_text'>
-            {index > 9 ? index + 1 : `0${index + 1}`}
-          </strong>
+        <span className={`gradient_text ${styles.project_index}`}>
+          {index > 9 ? index + 1 : `0${index + 1}`}
         </span>
         <div className={styles.pr}>
           <div className={styles.pr_info}>
             <div className={styles.pr_name}>
+              <p className={styles.pr_category}>
+                {project.category?.map((e, i) =>
+                  i + 1 < project.category.length ? `${e}, ` : `${e} `
+                )}
+              </p>
               <h1 className='display_0'>{project.name}</h1>
               <p className='tiny_p'>{project.description}</p>
             </div>
@@ -80,9 +83,6 @@ export default function ProjectThumbnail({ project, index }) {
                 alt={project.name}
               />
             </div>
-            <span className={`${styles.box} gradient_border`}>
-              <span className={styles.colors}></span>
-            </span>
           </div>
         </div>
       </div>

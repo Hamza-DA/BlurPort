@@ -22,6 +22,7 @@
   },
   {
     "name": "Weather App",
+    "category": ["Web App", "API"],
     "description": "Weather app is a standalone web app backed using express.js for backend, Next.js for frontend, tailwind for styling and openweather for API.",
     "thumb": "/projects/weatherapp.jpg",
     "direct_link": "https://hamzadahmani-weatherapp.herokuapp.com/",

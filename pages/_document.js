@@ -5,7 +5,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          
           <meta name='theme-color' content='#0c0c0c' />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
@@ -37,9 +36,9 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
+          <script>0</script>
           <Main />
           <NextScript />
-          <script src="/fouc-fix.js" />
         </body>
       </Html>
     );

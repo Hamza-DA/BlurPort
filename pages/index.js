@@ -1,9 +1,11 @@
 import Head from 'next/head';
-import styles from '../styles/index.module.scss';
+// import styles from '../styles/index.module.scss';
 import SocialBlocks from '../components/SocialBlocks';
 import SocialLinks from '../components/SocialLinks';
 import BlurBoxContainer from '../components/BlurBoxContainer';
 import Pragraph from '../components/Paragraph';
+import Skills from '../components/Skills';
+
 // custom cursor https://codesandbox.io/s/n6i55?file=/src/index.js
 // https://codepen.io/january1979/pen/MWbgRjy?editors=0010
 export default function Home() {
@@ -33,8 +35,8 @@ export default function Home() {
         />
       </Head>
       <BlurBoxContainer>
-        <div className={styles.AInf}>
-          <h2 className={styles.welcome_header}>
+        <div className={'AInf'}>
+          <h2 className={'welcome_header'}>
             turning interesting <br /> ideas into wonderful <br />{' '}
             <strong className='gradient_text'>solid</strong> projects!
           </h2>
@@ -43,7 +45,7 @@ export default function Home() {
             onClick={() =>
               window.scrollTo && window.scrollTo(0, document.body.scrollHeight)
             }
-            className={`${styles.cta_button} glass link_btn`}
+            className={`${'cta_button'} glass link_btn`}
           >
             <svg
               width='17'
@@ -73,28 +75,28 @@ export default function Home() {
               </defs>
             </svg>
             Contact me
-            <span className={styles.cholder}>
-              <span className={styles.colors}></span>
+            <span className={'cholder'}>
+              <span className={'colors'}></span>
             </span>
           </button>
         </div>
       </BlurBoxContainer>
-      <section className={styles.network_section}>
-        <div className={styles.linksHolder}>
+      <section className={'network_section'}>
+        <div className={'linksHolder'}>
           <SocialLinks length='short' />
         </div>
-        <div className={`${styles.box} gradient_border`}>
-          <span className={styles.colors}></span>
+        <div className={`${'box'} gradient_border`}>
+          <span className={'colors'}></span>
         </div>
       </section>
-      <section className={styles.about_section}>
-        <Pragraph className={styles.about_p}>
+      <section className={'about_section'}>
+        <Pragraph className={'about_p'}>
           Howdy &#129312; ! <br /> I'm Hamza Dahmani, a creative self-taught
           Front-End developer. My mission since 2018 is to turn your brilliant
           ideas into a one-of-a-kind production!
         </Pragraph>
 
-        <Pragraph className={styles.about_p}>
+        <Pragraph className={'about_p'}>
           I'm now looking for a new opportunity to work with a group of talented
           designers and developers. Drop me an{' '}
           <a href='mailto:madebyhamzadahmani@gmail.com' target='_blank'>
@@ -105,7 +107,118 @@ export default function Home() {
         </Pragraph>
       </section>
       <span className='br'></span>
+      <Skills />
+      <span className='br'></span>
       <SocialBlocks />
+      <style jsx>{`
+        @import './styles/variables';
+        @import './styles/mixins.scss';
+
+        .AInf {
+          z-index: 4;
+          position: relative;
+          margin-top: 10rem;
+          @media screen and (max-width: 1100px) {
+            margin-top: 12rem;
+          }
+          @media screen and (max-width: 480px) {
+            margin-top: 8rem;
+            .cta_button {
+              display: none;
+            }
+          }
+
+          .cta_button {
+            overflow: hidden;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            @include glass(2px);
+            position: relative;
+            .cholder {
+              position: absolute;
+              z-index: -1;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              opacity: 0;
+              transition: 0.5s ease all;
+              .colors {
+                @include gradient_background(
+                  40%,
+                  20%,
+                  40%,
+                  40%,
+                  30px,
+                  30%,
+                  55%,
+                  30%,
+                  10%,
+                  30px
+                );
+              }
+            }
+            &:hover .cholder {
+              opacity: 1;
+            }
+          }
+        }
+        .network_section {
+          position: relative;
+          padding: 7.5rem 0;
+          @media screen and (max-width: 768px) {
+            padding: 5.5rem 0;
+          }
+
+          .linksHolder {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            &::after {
+              content: '';
+              display: block;
+              width: 100%;
+              height: 2px;
+              background-color: $glass-gray;
+            }
+            a {
+              margin-left: 1rem;
+            }
+          }
+          .box {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 150%;
+            transform: translate(-100%, -50%) rotate(-165deg);
+            @include gradient_border();
+            .colors {
+              @include gradient_background(
+                40%,
+                20%,
+                42%,
+                0%,
+                50px,
+                20%,
+                65%,
+                20%,
+                10%,
+                50px
+              );
+            }
+          }
+        }
+
+        .about_section {
+          // margin-top: 4rem;
+          z-index: 2;
+          position: relative;
+          p {
+            max-width: 45ch;
+            margin-bottom: 2rem;
+          }
+        }
+      `}</style>
     </>
   );
 }

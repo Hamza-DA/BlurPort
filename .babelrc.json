@@ -1,0 +1,22 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "styled-jsx": {
+          "plugins": ["@styled-jsx/plugin-sass"],
+          "data" : ["$shadow-black: #00000010",
+            "$primary-black: #0c0c0c",
+            "$primary-white: #fafafa",
+            "$primary-red: #ff103d",
+            "$violet: #cf59e6",
+            "$blue: #28affb",
+            "$glass-gray: rgba(34, 34, 34, 0.25)",
+            "$border-gray: rgba(34, 34, 34, 0.6)",
+            "$gray: #111111"
+            ]
+        }
+      }
+    ]
+  ]
+}

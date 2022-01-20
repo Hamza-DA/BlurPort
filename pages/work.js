@@ -1,7 +1,7 @@
 import SocialBlocks from '../components/SocialBlocks';
 import BlurBoxContainer from '../components/BlurBoxContainer';
 import ProjectThumbnail from '../components/ProjectThumbnail';
-import styles from '../styles/work.module.scss';
+// import styles from '../styles/work.module.scss';
 import json from '.././public/projects/projects.json';
 import Head from 'next/head';
 import { useState } from 'react';
@@ -23,7 +23,7 @@ export default function Work() {
         />
       </Head>
       <BlurBoxContainer>
-        <div className={styles.work_intro}>
+        <div className={'work_intro'}>
           <p>
             When it comes to creating my projects, I always think outside the
             box.
@@ -34,13 +34,26 @@ export default function Work() {
           </p>
         </div>
       </BlurBoxContainer>
-      <section className={styles.projects}>
+      <section className={'projects'}>
         {Projects.map((e, i) => (
           <ProjectThumbnail project={e} index={i} />
         ))}
       </section>
       <span className='br'></span>
       <SocialBlocks />
+      <style jsx>{`
+        .work_intro {
+          margin-top: 10rem;
+          z-index: 10;
+          position: relative;
+          p {
+            margin-bottom: 2rem;
+          }
+        }
+        .projects {
+          margin-top: 8rem;
+        }
+      `}</style>
     </>
   );
 }

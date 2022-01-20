@@ -6,7 +6,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta name='theme-color' content='#0c0c0c' />
-          <meta name='viewport' content='width=device-width, initial-scale=1' />
+          {/* <meta name='viewport' content='width=device-width, initial-scale=1' /> */}
           <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
           <link rel='shortcut icon' href='./favicon.png' type='image/png' />
           <meta name='robots' content='index, follow' />
@@ -36,9 +36,10 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
-          <script>0</script>
+          {/* <script>0</script> */}
           <Main />
           <NextScript />
+          <script src='/scripts/developedby.js'></script>
         </body>
       </Html>
     );

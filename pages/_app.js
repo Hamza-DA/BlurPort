@@ -1,9 +1,27 @@
 import Layout from '../components/layout';
 import { m, LazyMotion, AnimatePresence, domAnimation } from 'framer-motion';
-import global from '../styles/global.scss';
 import Header from '../components/Header';
-import Head from 'next/head';
+import css from 'styled-jsx/css';
+import '../styles/global.scss';
 export default function App({ Component, pageProps, router }) {
+  const { className, styles } = css.resolve`
+    .app_wrapper {
+      padding: 0 6rem;
+      width: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background-color: #0c0c0c;
+      @media screen and (max-width: 1100px) {
+        padding: 0 4rem;
+      }
+      @media screen and (max-width: 768px) {
+        padding: 0 3rem;
+      }
+      @media screen and (max-width: 480px) {
+        padding: 0 1rem;
+      }
+    }
+  `;
   const varients = {
     animate: {
       opacity: 1,
@@ -20,7 +38,6 @@ export default function App({ Component, pageProps, router }) {
   };
   return (
     <>
-      
       <Layout>
         <Header />
         <LazyMotion features={domAnimation}>
@@ -31,13 +48,14 @@ export default function App({ Component, pageProps, router }) {
               initial='exit'
               animate='animate'
               exit='exit'
-              className='app_wrapper'
+              className={`${className} app_wrapper`}
             >
               <Component {...pageProps} />
             </m.div>
           </AnimatePresence>
         </LazyMotion>
       </Layout>
+      {styles}
     </>
   );
 }

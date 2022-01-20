@@ -42,18 +42,30 @@ export default function SocialLinks({ length }) {
       link: 'mailto:madebyhamzadahmani@gmail.com',
     },
   ];
-  return socialMedia.slice(0, length == 'short' ? 3 : 7).map((e, i) => (
-    <a
-      key={i}
-      className={`${styles.link} link`}
-      href={e.link}
-      target='_blank'
-      download={e.download == true ? 'Hamza Dahmani - Resume' : 'false'}
-    >
-      <span className={`${styles.link_emojie} emojie`}>
-        {emoji.getUnicode(`${e.emojie}`)}
-      </span>
-      {length == 'short' ? e.shortName : e.name}
-    </a>
-  ));
+  return (
+    <>
+      {socialMedia.slice(0, length == 'short' ? 3 : 7).map((e, i) => (
+        <a
+          key={i}
+          className={`link link`}
+          href={e.link}
+          target='_blank'
+          download={e.download == true ? 'Hamza Dahmani - Resume' : 'false'}
+        >
+          <span className={`link_emojie emojie`}>
+            {emoji.getUnicode(`${e.emojie}`)}
+          </span>
+          {length == 'short' ? e.shortName : e.name}
+        </a>
+      ))}
+      <style jsx>{`
+        .link {
+          .link_emojie {
+            font-size: 1.3rem;
+            margin-right: 0.1rem;
+          }
+        }
+      `}</style>
+    </>
+  );
 }

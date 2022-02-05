@@ -5,10 +5,21 @@ import SocialLinks from '../components/SocialLinks';
 import BlurBoxContainer from '../components/BlurBoxContainer';
 import Pragraph from '../components/Paragraph';
 import Skills from '../components/Skills';
-
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 // custom cursor https://codesandbox.io/s/n6i55?file=/src/index.js
 // https://codepen.io/january1979/pen/MWbgRjy?editors=0010
 export default function Home() {
+  const router = useRouter();
+  const handleRouteChange = (url) => {
+    window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
+      page_path: url,
+    });
+  };
+  useEffect(() => {
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return router.events.off('routeChangeComplete', handleRouteChange);
+  }, [router.events]);
   return (
     <>
       <Head>
@@ -81,7 +92,7 @@ export default function Home() {
           </button>
         </div>
       </BlurBoxContainer>
-      <section className={'network_section'}>
+      <section className={'network_section container'}>
         <div className={'linksHolder'}>
           <SocialLinks length='short' />
         </div>
@@ -89,7 +100,7 @@ export default function Home() {
           <span className={'colors'}></span>
         </div>
       </section>
-      <section className={'about_section'}>
+      <section className={'about_section container'}>
         <Pragraph className={'about_p'}>
           Howdy &#129312; ! <br /> I'm Hamza Dahmani, a creative self-taught
           Front-End developer. My mission since 2018 is to turn your brilliant
@@ -106,9 +117,9 @@ export default function Home() {
           if you believe I would be a good fit.
         </Pragraph>
       </section>
-      <span className='br'></span>
+      <span className='br container'></span>
       <Skills />
-      <span className='br'></span>
+      <span className='br container'></span>
       <SocialBlocks />
       <style jsx>{`
         @import './styles/variables';
@@ -165,9 +176,13 @@ export default function Home() {
         }
         .network_section {
           position: relative;
-          padding: 7.5rem 0;
+          // padding: 7.5rem 0;
+          padding-top: 7.5rem;
+          padding-bottom: 7.5rem;
           @media screen and (max-width: 768px) {
-            padding: 5.5rem 0;
+            // padding: 5.5rem 0;
+            padding-top: 5.5rem;
+            padding-bottom: 5.5rem;
           }
 
           .linksHolder {
@@ -181,6 +196,7 @@ export default function Home() {
               height: 2px;
               background-color: $glass-gray;
             }
+
             a {
               margin-left: 1rem;
             }

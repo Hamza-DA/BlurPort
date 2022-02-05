@@ -48,24 +48,31 @@ export default function Skills() {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       gap: 1.8rem;
+
+      @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+      }
     }
     .skill {
       position: relative;
-      height: 15rem;
+      min-height: 15rem;
       padding: 2rem;
-
-      &:nth-child(1) {
-        grid-area: 1 / 1 / 2 / 2;
+      @media screen and (max-width: 480px) {
+        padding: 1rem 1.5rem;
       }
-      &:nth-child(2) {
-        grid-area: 1 / 2 / 2 / 3;
-      }
-      &:nth-child(3) {
-        grid-area: 2 / 1 / 3 / 2;
-      }
-      &:nth-child(4) {
-        grid-area: 2 / 2 / 3 / 3;
-      }
+      // &:nth-child(1) {
+      //   grid-area: 1 / 1 / 2 / 2;
+      // }
+      // &:nth-child(2) {
+      //   grid-area: 1 / 2 / 2 / 3;
+      // }
+      // &:nth-child(3) {
+      //   grid-area: 2 / 1 / 3 / 2;
+      // }
+      // &:nth-child(4) {
+      //   grid-area: 2 / 2 / 3 / 3;
+      // }
     }
     .skill_image_container {
       width: 100%;
@@ -77,12 +84,12 @@ export default function Skills() {
       overflow: hidden;
     }
     .skill_image {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
+      // position: absolute;
+      // top: 0;
+      // right: 0;
+      // left: 0;
       width: inherit;
-      height: height;
+      height: inherit;
       object-fit: cover;
     }
     .skill_title {
@@ -102,18 +109,18 @@ export default function Skills() {
 
   return (
     <>
-      <section className={`skills_section ${className}`}>
+      <section className={`skills_section container ${className}`}>
         {skills.map((skill, i) => (
-          <InView triggerOnce={true}>
+          <InView triggerOnce={true} key={i}>
             {({ inView, ref }) => (
               <motion.article
                 ref={ref}
                 className={`${className} skill`}
-                initial={{ opacity: 0, y: '50%' }}
-                animate={{ y: inView ? 0 : '50%', opacity: inView ? 1 : 0 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: inView ? 1 : 0 }}
                 transition={{
-                  duration: 0.8 + i / 8,
-                  ease: 'easeInOut',
+                  duration: 0.8 + i / 12,
+                  ease: 'easeOut',
                 }}
               >
                 <svg
@@ -126,7 +133,7 @@ export default function Skills() {
                   <path
                     d='M0 2.12012H35.5654'
                     stroke='url(#paint0_linear_225_191)'
-                    stroke-width='4'
+                    strokeWidth='4'
                   />
                   <defs>
                     <linearGradient
@@ -137,12 +144,11 @@ export default function Skills() {
                       y2='21.215'
                       gradientUnits='userSpaceOnUse'
                     >
-                      <stop stop-color='#FF103D' />
-                      <stop offset='1' stop-color='#CF59E6' />
+                      <stop stopColor='#FF103D' />
+                      <stop offset='1' stopColor='#CF59E6' />
                     </linearGradient>
                   </defs>
                 </svg>
-                {console.log(inView)}
                 <h4 className={`${className} skill_title`}>{skill.skill}</h4>
                 <p className={`tiny_p ${className} skill_description`}>
                   {skill.description}

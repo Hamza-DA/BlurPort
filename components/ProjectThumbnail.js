@@ -1,49 +1,11 @@
 // import styles from '../styles/ProjectThumbnail.module.scss';
 import Image from 'next/image';
-import emoji from 'emoji-dictionary';
-import css from 'styled-jsx/css';
+import Link from 'next/link';
+import ProjectLinks from './ProjectsLinks';
 export default function ProjectThumbnail({ project, index }) {
-  const { className, styles } = css.resolve`
-    .link_emojie {
-      margin-right: 0.2rem;
-    }
-    .short_name {
-      display: none;
-      @media screen and (max-width: 980px) {
-        display: block;
-      }
-    }
-    .full_name {
-      display: block;
-      @media screen and (max-width: 980px) {
-        display: none;
-      }
-    }
-    .link {
-      margin-right: 1rem;
-      @media screen and (max-width: 700px) {
-        margin: 0;
-        margin-left: 1rem;
-      }
-    }
-  `;
-  const ProjectLinks = () => {
-    return project.social.map((e, i) => (
-      <>
-        <a key={i} className={`${className} link`} href={e.link}>
-          <span className={`${className} link_emojie`}>
-            {emoji.getUnicode(e.emojie)}
-          </span>
-          <span className={`${className} short_name`}>{e.short}</span>
-          <span className={`${className} full_name`}>{e.name}</span>
-        </a>
-      </>
-    ));
-  };
-
   return (
     <>
-      <div key={index} className={'project_thumb'}>
+      <article key={index} className={'project_thumb container'}>
         <span className={`gradient_text project_index`}>
           {index > 9 ? index + 1 : `0${index + 1}`}
         </span>
@@ -55,7 +17,9 @@ export default function ProjectThumbnail({ project, index }) {
                   i + 1 < project.category.length ? `${e}, ` : `${e} `
                 )}
               </p>
-              <h1 className='display_0'>{project.name}</h1>
+              <Link href={`/work/${project.name?.replaceAll(' ', '_')}`}>
+                <h1 className='display_0 single_link'>{project.name}</h1>
+              </Link>
               <p className='tiny_p'>{project.description}</p>
             </div>
             <div className={'pr_social'}>
@@ -98,7 +62,7 @@ export default function ProjectThumbnail({ project, index }) {
                 </span>
               </a>
               <span className={'links'}>
-                <ProjectLinks />
+                <ProjectLinks project={project} />
               </span>
             </div>
           </div>
@@ -114,8 +78,7 @@ export default function ProjectThumbnail({ project, index }) {
             </div>
           </div>
         </div>
-      </div>
-      {styles}
+      </article>
       <style jsx>{`
         @import './styles/variables';
         @import './styles/mixins.scss';
@@ -193,6 +156,10 @@ export default function ProjectThumbnail({ project, index }) {
                   margin-left: -0.2rem;
                   text-transform: capitalize;
                   max-width: 20ch;
+                  cursor: pointer;
+                  &:hover {
+                    text-decoration: underline;
+                  }
                   @media screen and (max-width: 700px) {
                     margin-bottom: 0.4rem;
                     margin-left: -0.1rem;

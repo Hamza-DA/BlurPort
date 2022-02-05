@@ -2,10 +2,10 @@
 export default function Layout({ children }) {
   return (
     <>
-      <main className={'container'}>{children}</main>
+      <main className={'appcontainer'}>{children}</main>
       <style jsx>
         {`
-          .container {
+          .appcontainer {
             max-width: 1400px;
             margin: 0 auto;
             position: relative;

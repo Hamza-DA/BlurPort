@@ -1,8 +1,8 @@
-import SocialBlocks from '../components/SocialBlocks';
-import BlurBoxContainer from '../components/BlurBoxContainer';
-import ProjectThumbnail from '../components/ProjectThumbnail';
+import SocialBlocks from '../../components/SocialBlocks';
+import BlurBoxContainer from '../../components/BlurBoxContainer';
+import ProjectThumbnail from '../../components/ProjectThumbnail';
 // import styles from '../styles/work.module.scss';
-import json from '.././public/projects/projects.json';
+import json from '../../public/projects/projects.json';
 import Head from 'next/head';
 import { useState } from 'react';
 export default function Work() {
@@ -46,6 +46,7 @@ export default function Work() {
           margin-top: 10rem;
           z-index: 10;
           position: relative;
+
           p {
             margin-bottom: 2rem;
           }

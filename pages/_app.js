@@ -6,20 +6,20 @@ import '../styles/global.scss';
 export default function App({ Component, pageProps, router }) {
   const { className, styles } = css.resolve`
     .app_wrapper {
-      padding: 0 6rem;
+      // padding: 0 6rem;
       width: 100%;
       overflow-y: auto;
       overflow-x: hidden;
       background-color: #0c0c0c;
-      @media screen and (max-width: 1100px) {
-        padding: 0 4rem;
-      }
-      @media screen and (max-width: 768px) {
-        padding: 0 3rem;
-      }
-      @media screen and (max-width: 480px) {
-        padding: 0 1rem;
-      }
+      // @media screen and (max-width: 1100px) {
+      //   padding: 0 4rem;
+      // }
+      // @media screen and (max-width: 768px) {
+      //   padding: 0 3rem;
+      // }
+      // @media screen and (max-width: 480px) {
+      //   padding: 0 1rem;
+      // }
     }
   `;
   const varients = {

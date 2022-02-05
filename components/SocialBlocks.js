@@ -3,7 +3,7 @@ import SocialLinks from './SocialLinks';
 export default function SocialBlocks() {
   return (
     <>
-      <section className='action_section'>
+      <section className='action_section container'>
         <div className='action_wrapper'>
           <div className='social_media'>
             <p className='tiny_p'>

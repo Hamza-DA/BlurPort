@@ -3,7 +3,7 @@ import BlurBox from './BlurBox';
 export default function BlurBoxContainer({ children }) {
   return (
     <>
-      <section className='blur_container'>
+      <section className='blur_container container'>
         <div className='A'>{children}</div>
         <div className='B'>
           <BlurBox />

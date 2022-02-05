@@ -1,4 +1,4 @@
-import json from '../../public/projects/projects.json';
+import json from './projects/projects.json';
 import Image from 'next/image';
 import ProjectLinks from '../../components/ProjectsLinks';
 import SocialBlocks from '../../components/SocialBlocks';

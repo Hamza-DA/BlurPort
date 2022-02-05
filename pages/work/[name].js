@@ -5,7 +5,7 @@ import SocialBlocks from '../../components/SocialBlocks';
 export const getStaticPaths = () => {
   const data = json;
   const paths = data.map((project) => {
-    return { params: { name: project.name.replaceAll(' ', '_') } };
+    return { params: { name: project.name?.replaceAll(' ', '_') } };
   });
   console.log(paths);
   return {

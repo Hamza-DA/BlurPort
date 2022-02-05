@@ -45,5 +45,5 @@ window.addEventListener('load', () => {
         </span>
     </a>
     `;
-  document.querySelector('.mark').appendChild(dv);
+  document.querySelector('.mark')?.appendChild(dv);
 });

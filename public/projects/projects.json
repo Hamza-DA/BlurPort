@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "watched - a movie app",
     "category": ["Web App", "Design"],
     "description": "Watched is a tool that helps you to save movies you already watched and other movies you would like to watch in the futur.",
@@ -18,9 +19,12 @@
         "emojie": "soccer",
         "link": "https://dribbble.com/shots/17028399-Watched-Movie-App"
       }
-    ]
+    ],
+    "gallery": null,
+    "screenShot": null
   },
   {
+    "id": 2,
     "name": "Weather App",
     "category": ["Web App", "API"],
     "description": "Weather app is a standalone web app backed using express.js for backend, Next.js for frontend, tailwind for styling and openweather for API.",
@@ -39,9 +43,12 @@
         "emojie": "soccer",
         "link": "https://dribbble.com/shots/17100561-Weather-app-minimalist-design"
       }
-    ]
+    ],
+    "gallery": null,
+    "screenShot": null
   },
   {
+    "id": 3,
     "name": "Rafinity haute couture",
     "category": ["Design"],
     "description": "'Rafinity Haute Couture, a concept, a symbol'. I redesigned the website to reflect their elegance, aesthetic, and privilege.",
@@ -54,6 +61,8 @@
         "emojie": "soccer",
         "link": "https://dribbble.com/shots/17169297-Rafinity-Haute-Couture-website-redesign"
       }
-    ]
+    ],
+    "gallery": null,
+    "screenShot": null
   }
 ]

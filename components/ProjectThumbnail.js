@@ -17,7 +17,7 @@ export default function ProjectThumbnail({ project, index }) {
                   i + 1 < project.category.length ? `${e}, ` : `${e} `
                 )}
               </p>
-              <Link href={`/work/${project.name?.replaceAll(' ', '_')}`}>
+              <Link href={`/work/${project.id.toString()}`}>
                 <h1 className='display_0 single_link'>{project.name}</h1>
               </Link>
               <p className='tiny_p'>{project.description}</p>
